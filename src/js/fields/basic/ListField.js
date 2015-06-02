@@ -245,16 +245,18 @@
                                 }
                             },
                             "error": function(jqXHR, textStatus, errorThrown) {
+                                console.log("Unable to load data from uri : " + self.options.dataSource);
+                                this.success([]);
 
-                                self.errorCallback({
+                                /*self.errorCallback({
                                     "message":"Unable to load data from uri : " + self.options.dataSource,
-                                    "stage": "DATASOURCE_LOADING_ERROR",
+                                   "stage": "DATASOURCE_LOADING_ERROR",
                                     "details": {
                                         "jqXHR" : jqXHR,
                                         "textStatus" : textStatus,
                                         "errorThrown" : errorThrown
                                     }
-                                });
+                                });*/
                             }
                         });
                     }
